@@ -4,6 +4,7 @@ import { GlobalContext } from '../context/GlobalState';
 export const AddTransaction = () => {
     const [text, setText] = useState('');
     const [amount, setAmount] = useState(0);
+    const [category, setCategory] = useState("None");
     const [isIncome, setIsIncome] = useState(true);
 
     const {addTr} = useContext(GlobalContext);
@@ -13,7 +14,8 @@ export const AddTransaction = () => {
         const newTr = {
             id: Math.floor(Math.random() * 100000000),
             text,
-            amount: +amount
+            amount: +amount,
+            category: category 
         }
 
         addTr(newTr);
@@ -30,15 +32,22 @@ export const AddTransaction = () => {
     }
 
     const incomeList = (
-        <select>
+        <select className='drop' onChange={(e) => setCategory(e.target.value)}>
+            <option>Choose a category</option>
             <option value="Salary">Salary</option>
-            <option value="Misc">Misc.</option>
+            <option value="MiscInc">Misc.</option>
         </select>
     )
 
     const expenseList = (
-        <select>
-            <option value="vegs">vegs</option>
+        <select className='drop' onChange={(e) => setCategory(e.target.value)}>
+            <option>Choose a category</option>
+            <option value="Housing">Housing</option>
+            <option value="Transportation">Transportation</option>
+            <option value="Food">Food</option>
+            <option value="Utilities">Utilities</option>
+            <option value="Insurance">Insurance</option>
+            <option value="MiscExp">Misc.</option>
         </select>
     )
 

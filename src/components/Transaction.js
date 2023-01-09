@@ -8,7 +8,8 @@ export const Transaction = ({transaction}) => {
 
     return (
         <li className={colourSign}>
-            {transaction.text} <span>{sign}${Math.abs(transaction.amount)}</span><button
+            {transaction.text} <span>{sign}${Math.abs(transaction.amount)}</span>
+            <span>{transaction.category}</span><button
             onClick={() => deleteTr(transaction.id)} className="delete-btn">x</button>
         </li>
     )
