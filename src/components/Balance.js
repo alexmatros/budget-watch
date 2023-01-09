@@ -1,4 +1,5 @@
 import React from 'react'
+import { GlobalContext } from '../context/GlobalState';
 
 export const Balance = () => {
   return (
