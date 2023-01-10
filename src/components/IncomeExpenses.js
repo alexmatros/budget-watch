@@ -3,7 +3,7 @@ import { GlobalContext } from '../context/GlobalState';
 import { PieChart } from 'react-minimal-pie-chart';
 
 export const IncomeExpenses = () => {
-    const {transactions} = useContext(GlobalContext)
+    const {transactions} = useContext(GlobalContext);
     const amountsTransactions = transactions.map(transaction => [transaction.amount, transaction.category]);
 
     const income = amountsTransactions.filter(item => item[0] > 0).reduce((acc, item) => (acc += item[0]), 0).toFixed(2);
