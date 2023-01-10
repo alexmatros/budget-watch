@@ -18,7 +18,9 @@ export const AddTransaction = () => {
             category: category 
         }
 
-        addTr(newTr);
+        if ((amount != 0) && (category != "None")) {
+            addTr(newTr);
+        };
     }
 
     const onAmountChange = e => {
@@ -33,7 +35,7 @@ export const AddTransaction = () => {
 
     const incomeList = (
         <select className='drop' onChange={(e) => setCategory(e.target.value)}>
-            <option>Choose a category</option>
+            <option value="none">Choose a category</option>
             <option value="Salary">Salary</option>
             <option value="MiscInc">Misc.</option>
         </select>
@@ -41,7 +43,7 @@ export const AddTransaction = () => {
 
     const expenseList = (
         <select className='drop' onChange={(e) => setCategory(e.target.value)}>
-            <option>Choose a category</option>
+            <option value="none">Choose a category</option>
             <option value="Housing">Housing</option>
             <option value="Transportation">Transportation</option>
             <option value="Food">Food</option>
