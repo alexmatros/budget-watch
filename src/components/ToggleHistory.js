@@ -9,6 +9,7 @@ export default function ToggleHistory({ children }) {
   function toggleShow() {
     setShow(!show);
   }
+  
   var buttonText = show ? "Hide History ▲" : "Show History ▼";
 
   return (
