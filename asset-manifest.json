@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/budget-watch/static/css/main.439a9ef0.css",
+    "main.js": "/budget-watch/static/js/main.f008d738.js",
+    "index.html": "/budget-watch/index.html",
+    "main.439a9ef0.css.map": "/budget-watch/static/css/main.439a9ef0.css.map",
+    "main.f008d738.js.map": "/budget-watch/static/js/main.f008d738.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.439a9ef0.css",
+    "static/js/main.f008d738.js"
+  ]
+}
