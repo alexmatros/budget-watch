@@ -1,3 +1,5 @@
+import React, { useEffect} from "react";
+
 import './App.css';
 import { Header } from './components/Header';
 import { Balance } from './components/Balance';
@@ -8,6 +10,10 @@ import { AddTransaction } from './components/AddTransaction';
 import { GlobalProvider } from './context/GlobalState';
 
 function App() {
+  useEffect(() => {
+    document.title = "Budget Watch";  
+  }, []);
+
   return (
     <GlobalProvider>
       <Header />
